@@ -11,9 +11,14 @@ pipeline {
                 sh "terraform --version"
             }
         }
-        stage('terraform_plan') {
+        stage('terraform_init') {
             steps {
                 sh "terraform init"
+            }
+        }
+        stage('terraform_plan') {
+            steps {
+                sh "terraform plan"
             }
         }
     }
