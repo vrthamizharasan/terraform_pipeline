@@ -18,7 +18,7 @@ pipeline {
         }
         stage('terraform_plan') {
             steps {
-                sh "terraform plan"
+                sh "./terraform plan"
             }
         }
     }
