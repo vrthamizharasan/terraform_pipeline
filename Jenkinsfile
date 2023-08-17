@@ -25,5 +25,10 @@ pipeline {
                 sh "pwd; cd /var/lib/jenkins/workspace/terraform_pipeline/ ; terraform plan"
             }
         }
+        stage('terraform_apply') {
+            steps {
+                sh "pwd; cd /var/lib/jenkins/workspace/terraform_pipeline/ ; terraform apply --auto-approve"
+            }
+        }
     }
 }
