@@ -18,7 +18,7 @@ pipeline {
         }
         stage('terraform_plan') {
             steps {
-                sh "pwd"
+                sh "pwd; cd /var/lib/jenkins/workspace/terraform_pipeline/ ; terraform plan"
             }
         }
     }
