@@ -27,7 +27,7 @@ pipeline {
         }
         stage('terraform_apply') {
             steps {
-                sh "pwd; cd /var/lib/jenkins/workspace/terraform_pipeline/ ; terraform destroy --auto-approve"
+                sh "pwd; cd /var/lib/jenkins/workspace/terraform_pipeline/ ; terraform apply --auto-approve"
             }
         }
     }
